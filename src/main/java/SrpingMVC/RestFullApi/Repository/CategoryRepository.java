@@ -1,9 +1,10 @@
 package SrpingMVC.RestFullApi.Repository;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository; 
 
 import SrpingMVC.RestFullApi.Domain.Category;
 
-public interface CategoryRepository extends CrudRepository<Category, Long>{
+public interface CategoryRepository extends JpaRepository<Category, Long>{
 	
+	Category findByName(String name);
 }
