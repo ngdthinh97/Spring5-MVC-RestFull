@@ -1,9 +1,7 @@
 package SrpingMVC.RestFullApi;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.Test; 
 
-@SpringBootTest
 class RestFullApiApplicationTests {
 
 	@Test
