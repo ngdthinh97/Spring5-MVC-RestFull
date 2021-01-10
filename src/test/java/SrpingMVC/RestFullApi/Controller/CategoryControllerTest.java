@@ -1,6 +1,6 @@
 package SrpingMVC.RestFullApi.Controller;
 
-import static org.hamcrest.CoreMatchers.equalTo; 
+import static org.hamcrest.CoreMatchers.equalTo;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -83,7 +83,7 @@ class CategoryControllerTest {
         mockMvc.perform(get("/api/v1/categories/")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andDo(print())
+                .andDo(print())  // print request header
                 .andExpect(jsonPath("$.categories", hasSize(2)));
         
         System.out.println();
